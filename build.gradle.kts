@@ -6,13 +6,21 @@ plugins {
 
 repositories {
     mavenCentral()
+    maven { url = uri("https://repo.spring.io/milestone") }
+    maven { url = uri("https://repo.spring.io/snapshot") }
 }
 
 dependencies {
     implementation(kotlin("stdlib"))
+    implementation("org.springframework.boot:spring-boot-starter") {
+        exclude(group = "org.springframework.boot", module = "spring-boot-starter-web")
+        exclude(group = "org.springframework.boot", module = "spring-boot-starter-webflux")
+    }
+    implementation(platform("org.springframework.ai:spring-ai-bom:1.0.0-SNAPSHOT"))
     implementation("org.openjfx:javafx-controls:17.0.2")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.0")
-    implementation("io.github.cdimascio:dotenv-kotlin:6.2.2")
+    implementation("org.springframework.ai:spring-ai-openai")
+    implementation("org.springframework.ai:spring-ai-openai-spring-boot-starter")
 }
 
 javafx {
