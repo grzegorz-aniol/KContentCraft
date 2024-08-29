@@ -1,6 +1,8 @@
 plugins {
     kotlin("jvm") version "1.8.0"
     id("org.openjfx.javafxplugin") version "0.0.14"
+    id("org.jetbrains.kotlin.plugin.spring") version "1.8.0"
+    id("org.springframework.boot") version "3.0.0"
     application
 }
 
@@ -29,7 +31,7 @@ javafx {
 }
 
 application {
-    mainClass.set("com.example.editor.SimpleEditorApp")
+    mainClass.set("com.appga.contentcraft.ApplicationKt")
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {

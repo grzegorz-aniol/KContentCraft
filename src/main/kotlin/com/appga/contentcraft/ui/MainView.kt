@@ -1,4 +1,4 @@
-package com.example.editor.ui
+package com.appga.contentcraft.ui
 
 import javafx.geometry.Insets
 import javafx.geometry.Pos

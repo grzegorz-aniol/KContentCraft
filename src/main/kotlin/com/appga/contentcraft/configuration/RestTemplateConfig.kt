@@ -1,4 +1,4 @@
-package com.example.editor.configuration
+package com.appga.contentcraft.configuration
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import java.nio.charset.StandardCharsets
@@ -9,11 +9,11 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 import org.springframework.web.client.RestTemplate
 
 
-@Configuration
-open class RestTemplateConfig {
+//@Configuration
+class RestTemplateConfig {
 
     @Bean
-    open fun restTemplate(objectMapper: ObjectMapper): RestTemplate {
+    fun restTemplate(objectMapper: ObjectMapper): RestTemplate {
         val restTemplate = RestTemplate()
         val converter = MappingJackson2HttpMessageConverter(objectMapper)
         converter.defaultCharset = StandardCharsets.UTF_8

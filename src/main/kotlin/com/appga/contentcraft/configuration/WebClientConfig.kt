@@ -1,19 +1,18 @@
-package com.example.editor.configuration
+package com.appga.contentcraft.configuration
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.springframework.context.annotation.Bean
-import org.springframework.context.annotation.Configuration
 import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
 import org.springframework.http.codec.ClientCodecConfigurer
 import org.springframework.http.codec.json.Jackson2JsonDecoder
 import org.springframework.http.codec.json.Jackson2JsonEncoder
 import org.springframework.web.reactive.function.client.WebClient
 
-@Configuration
-open class WebClientConfig {
+//@Configuration
+class WebClientConfig {
     private val jsonUtf8 = " application/json; charset=utf-8"
     @Bean
-    open fun webClient(objectMapper: ObjectMapper): WebClient {
+    fun webClient(objectMapper: ObjectMapper): WebClient {
         return WebClient.builder()
             .codecs { configurer: ClientCodecConfigurer ->
                 configurer.defaultCodecs()

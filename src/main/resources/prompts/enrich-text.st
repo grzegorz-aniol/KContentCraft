@@ -1,4 +1,4 @@
-Analyze the text provided. Detect emotions or the subject and enrich it with some awasome emojis.
+Analyze the text provided. Detect emotions or the subject and enrich it with some awsome emojis.
 Examples:
 - You detected the happines then you may append 😄.
 - You detected this is the announcement then you may prefix with 🔉.

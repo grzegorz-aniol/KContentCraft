@@ -1,8 +1,8 @@
-package com.example.editor
+package com.appga.contentcraft
 
-import com.example.editor.actions.TextChecker
-import com.example.editor.actions.TextEnricher
-import com.example.editor.ui.MainView
+import com.appga.contentcraft.actions.TextChecker
+import com.appga.contentcraft.actions.TextEnricher
+import com.appga.contentcraft.ui.MainView
 import javafx.application.Application
 import javafx.stage.Stage
 import org.springframework.boot.CommandLineRunner
@@ -18,7 +18,7 @@ import org.springframework.context.event.ContextRefreshedEvent
     ReactiveWebServerFactoryAutoConfiguration::class,
     ServletWebServerFactoryAutoConfiguration::class,
 ])
-open class KContentCraftSpringApp : CommandLineRunner, ApplicationListener<ContextRefreshedEvent> {
+class KContentCraftSpringApp : CommandLineRunner, ApplicationListener<ContextRefreshedEvent> {
 
     companion object {
         lateinit var springContext: ApplicationContext
