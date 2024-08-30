@@ -1,7 +1,9 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
-    kotlin("jvm") version "1.8.0"
+    kotlin("jvm") version "2.0.20"
     id("org.openjfx.javafxplugin") version "0.0.14"
-    id("org.jetbrains.kotlin.plugin.spring") version "1.8.0"
+    id("org.jetbrains.kotlin.plugin.spring") version "2.0.20"
     id("org.springframework.boot") version "3.0.0"
     application
 }
@@ -35,8 +37,8 @@ application {
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-    kotlinOptions {
-        jvmTarget = "17"
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_17)
     }
 }
 
