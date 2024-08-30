@@ -1,7 +1,7 @@
 # KContentCraft
 
 ## Overview
-KContentCraft is extremely simple editor for content creators. It allow to make editorial corrections and enrichments. 
+KContentCraft is an extremely simple editor for content creators. It allows for editorial corrections and enrichments. 
 
 ## Technologies Used
 
@@ -13,7 +13,7 @@ This project is a fancy and very exotic compilation of few technologies:
 ## Getting Started
 
 ### Prerequisites
-- JDK 17
+- JDK 21
 - Gradle
 
 ### Building the Project
