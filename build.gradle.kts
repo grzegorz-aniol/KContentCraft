@@ -1,8 +1,8 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 val kotlinVersion = "2.0.20"
-val javaVersion = 17
-val javafxVersion = "17.0.2"
+val javaVersion = 21
+val javafxVersion = "22.0.2"
 
 plugins {
     kotlin("jvm") version "2.0.20"

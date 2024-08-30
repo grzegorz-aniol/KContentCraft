@@ -13,7 +13,6 @@ open class MainView(
     private val textChecker: (String) -> String,
     private val textEnricher: (String) -> String,
 ) {
-
     lateinit var root: BorderPane
 
     fun initializeMainView(): BorderPane {

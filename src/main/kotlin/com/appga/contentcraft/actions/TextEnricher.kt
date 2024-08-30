@@ -14,7 +14,6 @@ class TextEnricher(
     private val chatModel: ChatModel,
     private val contentCache: ContentCache,
 ) {
-
     @Value("classpath:/prompts/check-paragraph.st")
     lateinit var enrichParagraphPrompt: Resource
 
