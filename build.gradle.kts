@@ -1,5 +1,9 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
+val kotlinVersion = "2.0.20"
+val javaVersion = 17
+val javafxVersion = "17.0.2"
+
 plugins {
     kotlin("jvm") version "2.0.20"
     id("org.openjfx.javafxplugin") version "0.0.14"
@@ -28,7 +32,7 @@ dependencies {
 }
 
 javafx {
-    version = "17.0.2"
+    version = javafxVersion
     modules = listOf("javafx.controls")
 }
 
@@ -38,12 +42,12 @@ application {
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_17)
+        jvmTarget.set(JvmTarget.fromTarget(javaVersion.toString()))
     }
 }
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
+        languageVersion.set(JavaLanguageVersion.of(javaVersion))
     }
 }
